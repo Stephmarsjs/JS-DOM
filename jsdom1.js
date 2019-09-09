@@ -1,4 +1,8 @@
-const search = document.getElementById('search-books');
-const bookList = document.getElementById('book-list');
+const titiles = document.getElementByClassName('title');
 
-console.log(search, bookList);
+console.log(Array.isArray(titiles));
+console.log(Array.isArray(Array.from(titles)));
+
+Array.from(titles).forEach(function(title){
+    console.log(title);
+});
