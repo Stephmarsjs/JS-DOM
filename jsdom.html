@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link href="styles.css" rel="stylesheet" />
+    <script src="jsdom1.js"></script>
     <title>JavaScript DOM Tutorials</title>
   </head>
   <body>
@@ -42,22 +43,25 @@
         <label for="hide">Hide all books</label>
 	    	<input type="text" placeholder="Add a book..." />
 	    	<button>Add</button>
-        </form>
-        <div id="tabbed-content">
-                <ul class="tabs">
-                  <li data-target="#about" class="active">About</li>
-                  <li data-target="#contact">Contact</li>
-                </ul>
-                <div class="panel active" id="about">
-                  <p>Content for about tab...</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id nunc porta urna ornare rhoncus. Ut convallis ante at.</p>
-                </div>
-                <div class="panel" id="contact">
-                  <p>Content for contact tab...</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id nunc porta urna ornare rhoncus. Ut convallis ante at.</p>
-                </div>
-              </div>
+	    </form>
+      <div id="tabbed-content">
+        <ul class="tabs">
+          <li data-target="#about" class="active">About</li>
+          <li data-target="#contact">Contact</li>
+        </ul>
+        <div class="panel active" id="about">
+          <p>Content for about tab...</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id nunc porta urna ornare rhoncus. Ut convallis ante at.</p>
+        </div>
+        <div class="panel" id="contact">
+          <p>Content for contact tab...</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id nunc porta urna ornare rhoncus. Ut convallis ante at.</p>
+        </div>
+      </div>
     </div>
-    <script src="jsdom1.js"></script>
   </body>
 </html>
+
+<!--If the script tags are not at the bottom of your HTML, Javascript code won't work, 
+// (because event listeners can't attach to something that doesn't yet exist). To get around this, 
+// add all of the JS code into the event listener above and it will only run once the DOM content has loaded.--> 
